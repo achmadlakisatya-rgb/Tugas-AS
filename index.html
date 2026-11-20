@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kopi Lonceng, roastery kopi spesialti di Malang. Biji single origin, house blend, dan cold brew yang disangrai tiap Selasa dan Jumat.">
+<meta name="theme-color" content="#B93829">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+<title>Kopi Lonceng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="cup"><i></i></div>
+  <p class="brand">KOPI LONCENG</p>
+  <p class="pct"><span id="pct">0</span>%</p>
+</div>
+<div class="curtain" aria-hidden="true"><span>KOPI LONCENG</span></div>
+
+<header class="nav">
+  <div class="bar">
+    <a class="logo" href="#beranda" data-go="beranda">KOPI LONCENG</a>
+    <nav class="menu" aria-label="Navigasi utama">
+      <a href="#beranda" data-go="beranda">Beranda</a>
+      <a href="#kopi" data-go="kopi">Kopi &amp; Biji</a>
+      <a href="#langganan" data-go="langganan">Langganan</a>
+      <a href="#tentang" data-go="tentang">Tentang Kami</a>
+      <a href="#lokasi" data-go="lokasi">Lokasi</a>
+    </nav>
+<div class="nav-r">
+  <button class="icon-btn" id="searchBtn" aria-label="Cari" aria-expanded="false">
+    <!-- Ikon kaca pembesar bawaanmu tetap di sini -->
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+  </button>
+  
+  <!-- TAMBAHAN TOMBOL HAMBURGER (Hanya muncul di HP/Tablet) -->
+  <button class="icon-btn burger-btn" id="burgerBtn" aria-label="Menu Navigasi" aria-expanded="false">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 7h18M3 12h18M3 17h18"/>
+    </svg>
+  </button>
+
+  <button class="app-btn" data-app>Open App</button>
+</div>
+  </div>
+
+  <div class="searchbar" id="searchbar" hidden>
+    <input id="q" type="search" placeholder="Cari nama kopi, asal, atau catatan rasa" aria-label="Cari kopi" autocomplete="off">
+  </div>
+</header>
+
+<main>
+  <!-- BERANDA -->
+  <section class="page active" id="beranda">
+    <div class="wrap intro">
+      <h1>Disangrai kecil-kecilan di Malang, dikirim selagi aromanya masih penuh.</h1>
+      <div class="cta">
+        <button class="app-btn" data-app>Pesan lewat aplikasi</button>
+        <button class="ghost" data-go="kopi">Lihat semua kopi</button>
+      </div>
+    </div>
+    <div class="hero">
+      <article class="hero-card dark">
+        <img class="bg" src="img/single-origin.jpg" alt="" onerror="this.remove()">
+        <span class="tag">Single Origin</span>
+        <h2>Gayo, Aceh Tengah</h2>
+        <p>Kakao pahit, rempah manis, body tebal. Natural process, sangrai medium.</p>
+        <button class="arrow" data-filter="Single Origin" aria-label="Lihat katalog Single Origin"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+      </article>
+      <article class="hero-card caramel">
+        <img class="bg" src="img/house-blend.jpg" alt="" onerror="this.remove()">
+        <span class="tag">House Blend</span>
+        <h2>Lonceng Pagi</h2>
+        <p>Gula aren dan almond. Racikan harian kami untuk V60, tubruk, dan moka pot.</p>
+        <button class="arrow" data-filter="House Blend" aria-label="Lihat katalog House Blend"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+      </article>
+      <article class="hero-card brick">
+        <img class="bg" src="img/kopi-botol.jpg" alt="" onerror="this.remove()">
+        <span class="tag">Kopi Botol</span>
+        <h2>Cold Brew Aren</h2>
+        <p>Diseduh dingin 18 jam, dimaniskan gula aren dengan sejumput garam.</p>
+        <button class="arrow" data-filter="Kopi Botol" aria-label="Lihat katalog Kopi Botol"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+      </article>
+    </div>
+
+    <div class="marquee"><div class="track"><div class="grp"><span>Disangrai tiap Selasa dan Jumat</span><span>Biji langsung dari petani</span><span>Tanggal sangrai tercetak di kantong</span><span>Dikirim selagi aromanya penuh</span></div><div class="grp" aria-hidden="true"><span>Disangrai tiap Selasa dan Jumat</span><span>Biji langsung dari petani</span><span>Tanggal sangrai tercetak di kantong</span><span>Dikirim selagi aromanya penuh</span></div></div></div>
+
+    <div class="split">
+      <div>
+        <h2>Cara memesan kopi yang masih segar</h2>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Pilih biji dan tingkat sangrai</h3><p>Mulai dari catatan rasa yang Anda suka: buah, cokelat, atau rempah.</p></div></li>
+          <li><span>02</span><div><h3>Tentukan gilingan</h3><p>Biji utuh, kasar untuk French press, sedang untuk V60, atau halus untuk espresso.</p></div></li>
+          <li><span>03</span><div><h3>Kami sangrai, Anda menunggu</h3><p>Sangrai tiap Selasa dan Jumat. Pesanan dikemas hari itu juga, tanggal sangrai tercetak di kantong.</p></div></li>
+        </ol>
+      </div>
+      <blockquote>
+        Kopi yang baik tidak perlu banyak dijelaskan. Sangrai secukupnya, giling sesaat sebelum diseduh, minum selagi hangat.
+        <cite>Tim sangrai Kopi Lonceng</cite>
+      </blockquote>
+    </div>
+
+  <div class="wrap banner">
+    <h2>Dari kebun sampai cangkir</h2>
+    <p>Tiga langkah yang kami jaga sendiri, supaya rasanya sampai utuh ke meja Anda.</p>
+  <div class="trio">
+  <figure>
+    <div class="fig f1">
+      <img src="c:\Users\LENOVO\OneDrive\Website kelas 10 (Front-end)\KopiLonceng\Prototype\Foto\Kebun Kopi.jpeg" alt="Dipetik merah, dipilah tangan" onerror="this.remove()">
+    </div>
+    <figcaption>Dipetik merah, dipilah tangan</figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig f2">
+      <img src="c:\Users\LENOVO\OneDrive\Website kelas 10 (Front-end)\KopiLonceng\Prototype\Foto\Sangrai.jpeg" alt="Disangrai kecil, lima kilo sekali jalan" onerror="this.remove()">
+    </div>
+    <figcaption>Disangrai kecil, lima kilo sekali jalan</figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig f3">
+      <img src="c:\Users\LENOVO\OneDrive\Website kelas 10 (Front-end)\KopiLonceng\Prototype\Foto\Seduh.jpeg" alt="Diseduh di rumah, tanpa buru-buru" onerror="this.remove()">
+    </div>
+    <figcaption>Diseduh di rumah, tanpa buru-buru</figcaption>
+  </figure>
+</div>
+  </div>
+  </section>
+
+
+
+  <!-- KOPI & BIJI -->
+  <section class="page" id="kopi">
+    <div class="wrap">
+      <h1 class="ph">Kopi &amp; Biji</h1>
+      <div class="filters" role="group" aria-label="Filter produk">
+        <button class="chip" data-filter="Semua" aria-pressed="true">Semua</button>
+        <button class="chip" data-filter="Single Origin" aria-pressed="false">Single Origin</button>
+        <button class="chip" data-filter="House Blend" aria-pressed="false">House Blend</button>
+        <button class="chip" data-filter="Kopi Botol" aria-pressed="false">Kopi Botol</button>
+        <span class="count" id="count" aria-live="polite"></span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- LANGGANAN -->
+  <section class="page" id="langganan">
+    <div class="wrap">
+      <h1 class="ph">Langganan biji kopi</h1>
+      <p class="lead">Biji baru sampai sebelum yang lama habis. Ganti rasa, jeda, atau berhenti kapan saja lewat aplikasi.</p>
+      <div class="plans">
+        <div class="plan"><h3>Mingguan</h3><p>1 kantong 200 g tiap pekan. Untuk yang menyeduh setiap pagi.</p><b>Rp84.000 / pekan</b><button class="mini" data-app>Mulai langganan</button></div>
+        <div class="plan"><h3>Dua pekan</h3><p>2 kantong 200 g, satu single origin dan satu house blend.</p><b>Rp170.000 / 2 pekan</b><button class="mini" data-app>Mulai langganan</button></div>
+        <div class="plan"><h3>Bulanan</h3><p>1 kg biji pilihan roaster, ditambah satu cold brew botol.</p><b>Rp360.000 / bulan</b><button class="mini" data-app>Mulai langganan</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section class="page" id="tentang">
+    <div class="wrap">
+      <figure class="about-photo"><img src="c:\Users\LENOVO\OneDrive\Website kelas 10 (Front-end)\KopiLonceng\Prototype\Foto\foto kedai.jpg" alt="Tim Kopi Lonceng di ruang sangrai" onerror="this.remove()"></figure>
+      <div class="two">
+      <h1 class="ph">Tentang Kami</h1>
+      <div class="prose">
+        <p>Kopi Lonceng bermula dari satu mesin sangrai kecil di Malang. Kami membeli langsung dari petani di Gayo, Kintamani, Bajawa, dan Dampit, lalu menyangrai dalam lot kecil agar tiap kantong bisa dicicipi sebelum dijual.</p>
+        <p>Namanya diambil dari lonceng sepeda penjual kopi keliling yang dulu lewat tiap subuh. Kami ingin kopi tetap terasa akrab: jujur asal-usulnya, jelas tanggal sangrainya.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI -->
+  <section class="page" id="lokasi">
+    <div class="wrap">
+      <h1 class="ph">Lokasi</h1>
+      <div class="loc">
+      <dl class="prose">
+        <dt>Kedai dan roastery</dt><dd>Jl. Contoh No. 12, Klojen, Kota Malang</dd>
+        <dt>Jam buka</dt><dd>Setiap hari, 07.00 sampai 22.00 WIB</dd>
+        <dt>Ambil pesanan</dt><dd>Pesan lewat aplikasi, ambil di meja bar tanpa antre.</dd>
+      </dl>
+      <div class="map"><iframe id="mapFrame" title="Peta lokasi Kopi Lonceng di Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="cols">
+    <div><p class="logo">KOPI LONCENG</p><p>Roastery kopi spesialti dari Malang. Disangrai tiap Selasa dan Jumat.</p></div>
+    <div><h4>Jelajahi</h4><a href="#beranda" data-go="beranda">Beranda</a><a href="#kopi" data-go="kopi">Kopi &amp; Biji</a><a href="#langganan" data-go="langganan">Langganan</a><a href="#tentang" data-go="tentang">Tentang Kami</a><a href="#lokasi" data-go="lokasi">Lokasi</a></div>
+    <div><h4>Kunjungi</h4><p>Jl. Contoh No. 12, Klojen<br>Kota Malang<br>Setiap hari 07.00 sampai 22.00</p></div>
+    <div>
+      <h4>Surat dari roastery</h4>
+      <p>Jadwal sangrai dan lot baru, sebulan dua kali.</p>
+      <form id="news"><input type="email" required placeholder="Alamat surel Anda" aria-label="Alamat surel"><button>Berlangganan</button></form>
+      <p id="newsMsg" role="status"></p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Kopi Lonceng, Malang</p>
+</footer>
+
+<div class="modal" id="appModal" hidden role="dialog" aria-modal="true" aria-label="Prototipe aplikasi Kopi Lonceng">
+  <div class="phone">
+    <button class="close" id="closeApp" aria-label="Tutup aplikasi">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <p class="empty" id="appEmpty">Tempel link embed Figma di FIGMA_EMBED_URL pada script.js.</p>
+    <iframe id="appFrame" title="Prototipe aplikasi Kopi Lonceng" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
